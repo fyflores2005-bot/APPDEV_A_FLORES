@@ -1,9 +1,14 @@
-import {Text, View } from 'react-native';
+import {Image, Text, View } from 'react-native';
+import {IMG} from '../utils';
 
 const ProfileScreen = () => {
     return (
-        <View>
-            <Text style={{ fontSize: 25 }}>Profile Screen</Text>
+        <View style={{ flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 3, borderColor: 'blue' }}>
+            <Image style={{ width: 200, height: 200 }} source={{ uri: IMG.LOGO }}  />
+            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Profile Screen</Text>
         </View>
     );
 };
