@@ -1,14 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import HomeScreen from './src/screens/HomeScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+import AppNav from './src/navigations';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <HomeScreen />
-      <ProfileScreen />
+    <View style={{ flex: 1 }}>
+      <AppNav/>
     </View>
   );
 };
