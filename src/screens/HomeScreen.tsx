@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { authLogout } from '../app/actions';
 import { useDispatch } from 'react-redux';
 
-const MidtermExam = () => {
+const HomeScreen: React.FC = () => {
 
 const navigations = useNavigation();
 const dispatch = useDispatch();
@@ -15,19 +15,20 @@ const dispatch = useDispatch();
         justifyContent: 'center',
         borderWidth: 3, borderColor: 'red' }}>
             <Image style={{ width: 200, height: 200 }} source={{ uri: IMG.LOGO }} />       
-            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>MIDTERM</Text>
+            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Home Screen</Text>
 
-            <TouchableOpacity onPress={() => navigations.navigate(ROUTES.MIDTERM)}>  
+            {/* <TouchableOpacity onPress={() => navigations.navigate(ROUTES.MIDTERM)}>  
                 <View style={{ backgroundColor: 'blue', padding: 10, borderRadius: 99}}>
-                    <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white' }}> MIDTERM</Text>
+                    <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white' }}> GO TO midterm</Text>
                 </View>
             </TouchableOpacity>
+
 
             <TouchableOpacity onPress={() => navigations.navigate(ROUTES.PROFILE)}>  
                 <View style={{ backgroundColor: 'blue', padding: 10, borderRadius: 99}}>
                     <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white' }}> PROFILE</Text>
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <TouchableOpacity
         onPress={() => {
@@ -49,4 +50,4 @@ const dispatch = useDispatch();
     );
 };
 
-export default MidtermExam;
+export default HomeScreen;

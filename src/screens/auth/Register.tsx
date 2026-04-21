@@ -6,7 +6,7 @@ import CustomButton from '../../components/CustomButton'
 import { useNavigation } from '@react-navigation/native'
 import { ROUTES } from '../../utils'
 
-const Register = () => {
+const Register: React.FC = () => {
   // 1. Added more state variables for registration
   const [fullName, setFullName] = useState('');
   const [emailAdd, setEmailAdd] = useState('');
@@ -29,7 +29,8 @@ const Register = () => {
         <CustomTextInput 
           label={'Full Name'} 
           placeholder={'Enter Full Name'} 
-          value={(val) => setFullName(val)}
+          value={fullName}
+          onChangeText={(val: string) => setFullName(val)}
           containerStyle={{ padding: 10 }}
           textStyle={{ borderRadius: 10, color: 'black', marginLeft: 15 }} 
         />
@@ -38,7 +39,8 @@ const Register = () => {
         <CustomTextInput 
           label={'Email Address'} 
           placeholder={'Enter Email Address'} 
-          value={(val) => setEmailAdd(val)}
+          value={emailAdd}
+          onChangeText={(val: string) => setEmailAdd(val)}
           containerStyle={{ padding: 10 }}
           textStyle={{ borderRadius: 10, color: 'black', marginLeft: 15 }} 
         />
@@ -47,7 +49,9 @@ const Register = () => {
         <CustomTextInput 
           label={'Password'}
           placeholder={'Enter Password'}
-          value={(val) => setPassword(val)}
+          value={password}
+          onChangeText={(val: string) => setPassword(val)}
+          secureTextEntry={true}
           containerStyle={{ padding: 10 }}
           textStyle={{ borderRadius: 10, color: 'black', marginLeft: 15 }}
         />
@@ -56,7 +60,9 @@ const Register = () => {
         <CustomTextInput 
           label={'Confirm Password'}
           placeholder={'Re-enter Password'}
-          value={(val) => setConfirmPassword(val)}
+          value={confirmPassword}
+          onChangeText={(val: string) => setConfirmPassword(val)}
+          secureTextEntry={true}
           containerStyle={{ padding: 10 }}
           textStyle={{ borderRadius: 10, color: 'black', marginLeft: 15 }}
         />
@@ -85,7 +91,7 @@ const Register = () => {
           }
           
           Alert.alert('Success', 'Account Created Successfully!');
-          navigations.navigate(ROUTES.LOGIN); // Navigate back to login
+          // navigations.navigate(ROUTES.LOGIN); // Navigate back to login
         }}
       />
 

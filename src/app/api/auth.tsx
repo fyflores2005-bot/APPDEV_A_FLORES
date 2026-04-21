@@ -1,9 +1,8 @@
-interface LoginCredentials {
-    username: string;
-    password: string;
-}
-export async function authLogin({username, password}: LoginCredentials) {
-    const BASE_URL: string = 'http://192.168.254.102:8000/api';
+import { LoginCredentials, LoginResponse } from "../../types/apitypes";
+
+
+export async function authLogin({username, email, password}: LoginCredentials) {
+    const BASE_URL: string = 'http://192.168.137.122:8000/api';
 
     let options = {
         method: 'POST',
@@ -14,6 +13,7 @@ export async function authLogin({username, password}: LoginCredentials) {
     },
     body: JSON.stringify({
         username: username,
+        email: email,
         password: password,
     }),
 };
@@ -22,37 +22,38 @@ const response = await fetch(BASE_URL + '/login', {
     ...options,
     body: JSON.stringify({
         username: username,
+        email: email,
         password: password,
     }),
 });
 
- let data;
-    try {
-        data = await response.json();
-    } catch (e) {
-        data = null;
-    }
+//  let data;
+//     try {
+//         data = await response.json();
+//     } catch (e) {
+//         data = null;
+//     }
 
-    if (response.ok) {
-        console.log('Login success response:', data);
-        return data;
-    } else {
-        const message =
-            (data && (data.errors?.password || data.errors?.detail || data.detail)) ||
-            'Login failed';
-        throw new Error(message);
-    }
+//     if (response.ok) {
+//         console.log('Login success response:', data);
+//         return data;
+//     } else {
+//         const message =
+//             (data && (data.errors?.password || data.errors?.detail || data.detail)) ||
+//             'Login failed';
+//         throw new Error(message);
+//     }
 
 
 
-// const data = await response.json();
+const data: LoginResponse = await response.json();
 
-// if (response.status === 200) {
-//     console.log(data);
-//     return data;
-// }else{
-//     throw new Error(data.errors || 'Login failed');
-// }
+if (response.status === 200) {
+    console.log(data);
+    return data;
+}else{
+    throw new Error(data.message || 'Login failed');
+}
 
 }
 

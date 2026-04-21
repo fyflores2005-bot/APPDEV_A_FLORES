@@ -26,22 +26,33 @@ const {isLoading, data, isError, error} = useSelector(
   (state:
     {auth: {
       isLoading: boolean,
-      isError: boolean;
-      error: string | null;
+      isError: boolean,
+      error: string | null,
       data:
-      {status: boolean,
-        message: string,
-        data:{
-          id: number,
-          username: number | string,
-          name: string,
-          data: {
-            math: number,
-          }
+      {token: string
+        user:
+        {
+          username: string,
+          email: string,
+          roles: string[],
+          verified: boolean,
         }
       }
     }}) =>
       state.auth);
+
+
+
+      // status: boolean,
+      //   message: string,
+      //   data:{
+      //     id: number,
+      //     username: number | string,
+      //     name: string,
+      //     data: {
+      //       math: number,
+      //     }
+      //   }
 
 const navigations = useNavigation();
 const dispatch = useDispatch();
@@ -86,7 +97,7 @@ useEffect(() => {
 
       <CustomTextInput label={'Password'}
        placeholder={'Enter Password'}
-       value={(val: string) => setPassword(val)}
+       value={(val: string | number) => setPassword(val as string)}
        containerStyle={{ 
         padding: 10,
         
@@ -134,14 +145,14 @@ useEffect(() => {
             
         <Text> Create an Account </Text>
         
-        <TouchableOpacity onPress={() => navigations.navigate(ROUTES.REGISTER)}>
+        {/* <TouchableOpacity onPress={() => navigations.navigate(ROUTES.REGISTER)}>
             
           <Text style={{color: 'red',
              fontWeight: 'bold',
              marginLeft: 10,
              }}> Register </Text>   
 
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
       </View>
     </View>
