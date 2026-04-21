@@ -3,6 +3,7 @@ import { ROUTES, IMG} from '../utils';
 //SCREENS
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import MidtermExam from '../screens/MidtermExam'
 
 
 
@@ -14,6 +15,7 @@ const MainNavigation = () => {
       <Stack.Screen name={ROUTES.HOME} component={HomeScreen} 
       />
       <Stack.Screen name={ROUTES.PROFILE} component={ProfileScreen} />
+      <Stack.Screen name={ROUTES.MIDTERM} component={MidtermExam} />
     </Stack.Navigator>
     );
 };

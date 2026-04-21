@@ -21,11 +21,12 @@ import AuthNav from './AuthNav';
     }, [isDarkMode]);
 
 
-    
+
     return (
         <NavigationContainer>
        {/* {data && data.access_token ? <AuthNav /> : <MainNav />} */}
-       {isLoggedIn ? <MainNav /> : <AuthNav />}
+       {/* { !isLoggedIn ? <MainNav /> : <AuthNav />} */}
+       { isLoggedIn ? <MainNav /> : <AuthNav />}
         </NavigationContainer>
     )
  }
