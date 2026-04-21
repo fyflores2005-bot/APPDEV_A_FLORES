@@ -1,5 +1,10 @@
-export async function authLogin({username, password}) {
-    const BASE_URL = 'http://192.168.254.102:8000/api';
+interface LoginCredentials {
+    username: string;
+    password: string;
+}
+export async function authLogin({username, password}: LoginCredentials) {
+    const BASE_URL: string = 'http://192.168.254.102:8000/api';
+
     let options = {
         method: 'POST',
         headers: {
@@ -7,10 +12,10 @@ export async function authLogin({username, password}) {
             'Content-Type': 'application/json',
 
     },
-    // body: JSON.stringify({
-    //     username: username,
-    //     password: password,
-    // }),
+    body: JSON.stringify({
+        username: username,
+        password: password,
+    }),
 };
  
 const response = await fetch(BASE_URL + '/login', {
