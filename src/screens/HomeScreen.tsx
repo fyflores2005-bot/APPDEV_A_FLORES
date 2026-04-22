@@ -17,7 +17,7 @@ const dispatch = useDispatch();
             <Image style={{ width: 200, height: 200 }} source={{ uri: IMG.LOGO }} />       
             <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Home Screen</Text>
 
-            {/* <TouchableOpacity onPress={() => navigations.navigate(ROUTES.MIDTERM)}>  
+            <TouchableOpacity onPress={() => navigations.navigate(ROUTES.MIDTERM)}>  
                 <View style={{ backgroundColor: 'blue', padding: 10, borderRadius: 99}}>
                     <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white' }}> GO TO midterm</Text>
                 </View>
@@ -28,7 +28,7 @@ const dispatch = useDispatch();
                 <View style={{ backgroundColor: 'blue', padding: 10, borderRadius: 99}}>
                     <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white' }}> PROFILE</Text>
                 </View>
-            </TouchableOpacity> */}
+            </TouchableOpacity> 
 
             <TouchableOpacity
         onPress={() => {

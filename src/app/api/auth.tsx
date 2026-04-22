@@ -2,7 +2,7 @@ import { LoginCredentials, LoginResponse } from "../../types/apitypes";
 
 
 export async function authLogin({username, email, password}: LoginCredentials) {
-    const BASE_URL: string = 'http://192.168.137.122:8000/api';
+    const BASE_URL: string = 'http://192.168.254.102:8000/api';
 
     let options = {
         method: 'POST',

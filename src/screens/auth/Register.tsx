@@ -91,12 +91,12 @@ const Register: React.FC = () => {
           }
           
           Alert.alert('Success', 'Account Created Successfully!');
-          // navigations.navigate(ROUTES.LOGIN); // Navigate back to login
+           navigations.navigate(ROUTES.LOGIN); // Navigate back to login
         }}
       />
 
       
-      {/* <View style={{
+   <View style={{
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -109,7 +109,7 @@ const Register: React.FC = () => {
             marginLeft: 10,
           }}> Login </Text>   
         </TouchableOpacity>
-      </View> */}
+      </View> 
 
     </View>
   )

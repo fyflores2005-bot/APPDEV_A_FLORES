@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "765506474739",
+    "project_id": "appdev-a-b8721",
+    "storage_bucket": "appdev-a-b8721.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765506474739:android:20ee14f0ac68ffcd191d86",
+        "android_client_info": {
+          "package_name": "com.flores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765506474739-49b3mr4tn4215rlk8nfdlm6mp0ftjs11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flores",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "765506474739-qdjd532nucuri220vc8gscf39l2ogu71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMbj2sg6g308UXZQQRTchrvYZwygp5GmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765506474739-qdjd532nucuri220vc8gscf39l2ogu71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

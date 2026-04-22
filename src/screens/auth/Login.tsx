@@ -145,14 +145,14 @@ useEffect(() => {
             
         <Text> Create an Account </Text>
         
-        {/* <TouchableOpacity onPress={() => navigations.navigate(ROUTES.REGISTER)}>
+         <TouchableOpacity onPress={() => navigations.navigate(ROUTES.REGISTER)}>
             
           <Text style={{color: 'red',
              fontWeight: 'bold',
              marginLeft: 10,
              }}> Register </Text>   
 
-        </TouchableOpacity> */}
+        </TouchableOpacity> 
 
       </View>
     </View>
