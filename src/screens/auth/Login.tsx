@@ -17,6 +17,7 @@ import auth, {authLogin} from '../../app/reducers/auth';
 import IMG from '../../utils/images';
 import { GoogleSigninButton } from '@react-native-google-signin/google-signin';
 import { _signInwithGoogle } from '../../utils/firebase';
+import { showError, showInfo, showSuccess } from '../../components/alertMessage';
 
 
 const Login: React.FC = () => {
@@ -145,14 +146,22 @@ useEffect(() => {
          color={GoogleSigninButton.Color.Dark}
          onPress={async () => {
           
-          await _signInwithGoogle().then((result) =>{
-            console.log(result);
-          })
-          .catch((err) => {
-            Alert.alert('Error', `${err.message}`);
-          }).finally(() => {
-            Alert.alert('Success', 'Google Sign-In successful');
-          });
+          // await _signInwithGoogle().then((result) =>{
+          //   console.log(result);
+          // })
+          // .catch((err) => {
+          //   Alert.alert('Error', `${err.message}`);
+          // }).finally(() => {
+          //   Alert.alert('Success', 'Google Sign-In successful');
+          // });
+
+          showError({
+            title: 'Google Sign-In',
+             message: 'Google Sign-In process initiated',
+             position: 'top',
+            //  position: 'bottom',
+             visibilityTime: 3000,
+            });
         
         }}
        />
